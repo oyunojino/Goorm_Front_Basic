@@ -8,3 +8,15 @@
 
 2. [0516_HTML](https://darkened-crest-275.notion.site/0516_HTML-ef77be228ed84570933f29f627f0b2b5)
     - HTML
+    > head
+    > > <meta>
+    >> <title>
+    > body
+    > > Text
+    > > > <h숫자>
+    > > > <p>
+    > > List
+    > > Table
+    > > Image
+    > > Link
+    > > Form
