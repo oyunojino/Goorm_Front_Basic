@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Label</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="login.jsp" method="post">
+        <!-- 
+            <label> 태그
+                - 인라인 레벨 요소이기 때문에 한 줄로 작성됨
+                - 텍스트와 입력창을 한 줄로 표현할 떄 주로 사용
+                - 속성
+                    for : <input> 태그의 id를 작성해서 연결
+
+            # 줄바꿈을 하고 싶은 경우 사용
+                <p>아이디</p>
+                <input type="text">
+         -->
+
+        <ul>
+            <li>
+                <!-- 경우 1 : CSS 적용 X -->
+                <label for="">아이디
+                    <input type="text">
+                </label>
+            </li>
+            <li>
+                <!-- 경우 2 : CSS 적용 O -->
+                <label for="pw">비밀번호</label>
+                <input type="password" id="pw">
+            </li>
+            <li>
+                <input type="submit" value="로그인">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <!-- 
+        <form> 태그
+            - 백엔트에게 데이터를 넘겨줄 떄 사용
+            - <input> 태그 내용을 종합해서 백엔드로 전달
+            - <input> 태그를 제외한 다른 태그의 정보는 전달 X
+            - 속성
+                method : 백엔드에 데이터를 전달하는 방식 지정(get / post)
+                action : 해당 데이터를 처리해줄 프로그램(파일명.파일형식) 지정
+
+        <input> 태그( 단일 태그 )
+            - 속성
+                text   : 
+                submit : 
+                value  : 값을 지정하지 않는다면 기본으로 "제출"이 사용됨
+     -->
+    <form method="post" action="test.php">
+        <input type="text">
+        <input type="submit" value="검색">
+    </form>
+</body>
+</html>
