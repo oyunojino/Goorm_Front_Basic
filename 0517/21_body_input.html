@@ -34,7 +34,9 @@
 
                 autofocus : 시작 시 자동으로 첫 입력부분으로 커서 이동
                 placeholder : 입력해야할 정보를 임시로 표시
-                readonly  : 수정할 수 없는 항목
+                readonly  : 입력해야할 정보에 대한 힌트 제공
+                required  : 수정할 수 없는 항목
+                size, maxlength, minlength : 글자 길이 제한
     -->
     <form action="test.php">
         <ul>
@@ -147,6 +149,10 @@
             <li>
                 <label for="rq">필수 입력 사항</label>
                 <input type="text" id="rq" required>
+            </li>
+            <li>
+                <label for="size">길이 / 최소 길이 / 최대 길이</label>
+                <input type="text" id="size" size="5" minlength="2" maxlength="10">
             </li>
             <li>
                 <input type="submit">
