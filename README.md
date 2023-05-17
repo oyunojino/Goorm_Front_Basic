@@ -6,7 +6,7 @@
     3. Notion 설명
     4. AWS 탐구
 
-## [0516_HTML](https://darkened-crest-275.notion.site/0516_HTML-ef77be228ed84570933f29f627f0b2b5)
+## [0516~0517_HTML](https://darkened-crest-275.notion.site/0516_HTML-ef77be228ed84570933f29f627f0b2b5)
     1. 기본 설명
     2. VSCode 설정값 변경
         - 한글팩
@@ -21,3 +21,9 @@
         - Image
         - Link
         - Form
+        - Label
+        - Fieldset, Legend
+        - Input
+        - Select
+        - Datalist
+        - Textarea
