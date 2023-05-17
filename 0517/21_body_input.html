@@ -34,6 +34,7 @@
 
                 autofocus : 시작 시 자동으로 첫 입력부분으로 커서 이동
                 placeholder : 입력해야할 정보를 임시로 표시
+                readonly  : 수정할 수 없는 항목
     -->
     <form action="test.php">
         <ul>
@@ -138,6 +139,10 @@
             <li>
                 <label for="ph">힌트 제공</label>
                 <input type="text" id="ph" placeholder="힌트가 표기됩니다.">
+            </li>
+            <li>
+                <label for="ro">읽기 전용</label>
+                <input type="text" id="ro" value="수정 불가 항목" readonly>
             </li>
             <li>
                 <input type="submit">
