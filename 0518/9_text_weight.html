@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Weight</title>
+    <!-- 
+        글자 굵기()
+            - 숫자(100 ~ 900)  : 세부 굵기 적용
+            - normal(400)      : 기본 굵기
+            - bold(700)        : 두껍게
+            - lighter / bolder : 부모 태그 기준으로 얇게 두껍게
+     -->
+    <style>
+        .w1 {
+            font-weight: bold;
+        }
+        .w2 {
+            font-weight: 100;
+        }
+        .w3 {
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <p>경우 1 : 일반</p>
+    <p class="w1">경우 2 : bold</p>
+    <p class="w2">경우 3 : 매우 얇게</p>
+    <p class="w3">경우 4 : 매우 두껍게</p>
+</body>
+</html>
