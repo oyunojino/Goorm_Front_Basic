@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Combine</title>
+    <!-- 
+        font : (글자 굵기) (글자 크기) (글자 폰트);
+             : 순서는 상관 없음
+     -->
+    <style>
+        @font-face {
+            font-family: 'trana';
+            src: local('trana'),
+                 url(/0518/font/trana.eot),
+                 url(/0518/font/trana.woff) format('woff'),
+                 url(/0518/font/trana.ttf) format('truetu');
+        }
+        .f {
+            font : bold 30px 'trana';
+        }
+    </style>
+</head>
+<body>
+    <p>font 속성 기본</p>
+    <p class="f">font 속성 적용</p>
+</body>
+</html>
