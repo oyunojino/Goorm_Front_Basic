@@ -37,7 +37,7 @@
         - Inline Style
     4. CSS 구성요소
         - Selector(선택자)
-            > !important
+            -> !important
         - Inheritance(상속)
         - Cross Browser
     5. Property
