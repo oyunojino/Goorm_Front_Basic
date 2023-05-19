@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Line</title>
+    <!-- 
+        텍스트 줄 표시
+            - 기본(none)            : 줄 없음
+            - 밑줄(underline)       : 텍스트 밑
+            - 윗줄(overline)        : 텍스트 위
+            - 취소선(line-through)  : 텍스트 중간
+     -->
+    <style>
+        .none {
+            text-decoration: none;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .overline {
+            text-decoration: overline;
+        }
+        .line-through {
+            text-decoration: line-through;
+        }
+        .inside {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="none">기본</h2>
+    <h2 class="underline">밑줄</h2>
+    <h2 class="overline">윗줄</h2>
+    <h2 class="line-through">취소선</h2>
+
+    <hr>
+
+    <a href="#" class="inside">inside style로 a 태그 밑줄 제거</a>
+    <br>
+    <a href="#" style="text-decoration: none; color: black;">inline style로 a 태그 밑줄 제거</a>
+</body>
+</html>
