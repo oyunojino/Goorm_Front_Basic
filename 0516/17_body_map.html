@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+    <img src="/0516/img/kids.jpg" usemap="#eventmap" alt="이미지">
+    <map name="eventmap">
+        <!-- 
+            <area> 태그
+                - shape  : 사각형(rect)_x좌표, y좌표,x좌표, y좌표 / 동그라미(circle)_x좌표, y좌표, 반지름
+                - coords : 좌표를 지정( 사각형-4개, 원- 3개 )
+                - href   : 클릭 시 이동할 지점을 지정
+                - target : 새탭(_blank)
+         -->
+        <area shape="rect" coords="0,0,204,225" href="https://www.naver.com/" alt="네이버" target="_blank">
+        <area shape="circle" coords="300,126,77" href="https://www.daum.net/" alt="다음">
+    </map>
+</body>
+</html>
