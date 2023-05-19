@@ -28,7 +28,7 @@
         - Datalist
         - Textarea
 
-## [0518_CSS](https://darkened-crest-275.notion.site/0518_CSS-248588006b2a43bb83b131d6e46218af)
+## [0518~0519_CSS](https://darkened-crest-275.notion.site/0518_CSS-248588006b2a43bb83b131d6e46218af)
     1. 기본 설명
     2. 프로그램 기본 구성
     3. 스타일 시트 적용 방법
