@@ -57,8 +57,9 @@
     2. Identifier(식별자)
     3. Data Type
         - String
+            * Escape
         - Number
+            * Calcultion
         - Boolean
-        - 논리 연산_ AND, OR, NOT
-        - 사칙 연산
+            * AND, OR, NOT
     4. Varibale(변수)
