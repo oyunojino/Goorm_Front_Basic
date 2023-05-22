@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Sizing</title>
+    <!--
+        Box Sizeing
+            ex) width 150px / height 100px / padding 10px / border 5px / margin 15px
+                ┌----margin-------┐
+                |┌----border-----┐|
+                || ┌--padding--┐ ||
+                || | ┌content┐ | ||
+                || | └-------┘ | ||
+                || └-----------┘ ||
+                |└---------------┘|
+                └-----------------┘
+            1. content-box( content 부분의 width, height 지정 )
+                -> 실제 컨텐츠 크기를 기준으로 넓혀가는 방식
+
+            2. border-box( border 부분의 width, height 지정 )
+                -> 가로 / 세로 길이가 테두리까지 포함하는 값
+                -> 실제 조건이 같다면 border-box의 컨텐츠 크기가 더 작음
+                -> content의 크기는 계산을 통해서 알 수 있음
+            
+     -->
+     <style>
+        .box1 {
+            box-sizing: border-box;
+            width: 150px;
+            height: 100px;
+            padding: 10px;
+            margin: 15px;
+            border: 5px solid red;
+        }
+        .box2 {
+            box-sizing: content-box;
+            width: 150px;
+            height: 100px;
+            padding: 10px;
+            margin: 15px;
+            border: 5px solid blue;
+        }
+     </style>
+</head>
+<body>
+    <div class="box1">border-box</div>
+    <div class="box2">content-box</div>
+</body>
+</html>
