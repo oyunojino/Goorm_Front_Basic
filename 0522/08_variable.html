@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable</title>
+    <!-- 
+        변수 지정 방법
+        1. 변수 선언 후 값을 대입하여 초기화
+        2. 변수 선언과 초기화를 함께함
+     -->
+     <script>
+        var PI_1;
+        PI_1 = 3.141592;
+
+        var PI_2 = 3.141592, radius = 10;
+
+        alert("PI_1 : " + PI_1);
+        alert("PI_2 : " + PI_2);
+
+        alert("2 * PI_1 * radius : " + (2 * PI_1 * radius));
+
+        //-----------------------------------------------------------
+
+        var stringVar = 'String';
+        var numberVar = 273;
+        var booleanVar = true;
+        var functionVar = function () {}; // 함수 형태
+        var objectVar = {};               // 키 : 값 형태
+        var anotherVar = undefined;
+
+
+        //  자료형 확인_ typeof()
+        alert(typeof stringVar);
+        alert(typeof numberVar);
+        alert(typeof booleanVar);
+        alert(typeof functionVar);
+        alert(typeof objectVar);
+        alert(typeof anotherVar);
+
+        //-----------------------------------------------------------
+
+        var a = 2;
+
+        a += 7;  // a = a + 7;
+        a -= 7;  // a = a - 7;
+        a *= 7;  // a = a * 7;
+        a /= 7;  // a = a / 7;
+
+        alert("a의 결과는? " + a);
+
+        //-----------------------------------------------------------
+
+        // 변수 재지정 가능
+        var cup = 'coffee';
+        cup = 'green tea';
+        cup = 'water';
+
+        alert("cup 결과는? " + cup);
+
+        //-----------------------------------------------------------
+
+        // 입력받아 input 변수에 저장
+        var input = prompt();
+        alert(input);
+
+        //-----------------------------------------------------------
+
+        window.onload = function() {
+            var list = "";
+            list += "<ul>";
+            list += "<li>Hello</li>";
+            list += "<li>js</li>";
+            list += "</ul>";
+
+            document.body.innerHTML = list;
+        };
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
