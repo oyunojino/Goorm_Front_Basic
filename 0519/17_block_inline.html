@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Block / Inline</title>
+    <style>
+        /* 
+            Block Level 요소 태그
+                - 태그가 추가될 떄 자동으로 세로로 생성되는 태그
+                - 화면을 벗어나면 스크롤바가 자동 생성되는 태그(휠, 스크롤바)
+                ex ) <p>, <h숫자>, <ul>, <ol>, <form>, <table>, <fieldset>, <div>, ...
+
+            Inline Level 요소 태그
+                - 태그가 추가될 때 자동으로 가로로 생성되는 태그
+                - 기본적으로 가로로 생성되지만 화면을 벗어나면 자동으로 다음 줄에 표기
+                ex ) <img>, <map>, <span>, <input>, <textarea>, <label>, <button>, ...
+         */
+
+         div {
+            border : 3px solid blue;
+         }
+         img {
+            border : 3px solid red;
+         }
+         #inline {
+            /* 
+                display  : 단순한 배치
+                position : 정교한 배치
+             */
+            display: inline;
+         }
+         #block {
+            /* 
+                block 속성값을 사용하여 세로 배치로 지정
+             */
+             display: block;
+         }
+    </style>
+</head>
+<body>
+    <h1>display 적용 전</h1>
+    <div>
+        <img src="/0519/img/pic1.jpg" alt="이미지1">
+        <img src="/0519/img/pic2.jpg" alt="이미지2">
+        <img src="/0519/img/pic3.jpg" alt="이미지3">
+    </div>
+    <div>
+        <img src="/0519/img/pic1.jpg" alt="이미지1">
+        <img src="/0519/img/pic2.jpg" alt="이미지2">
+        <img src="/0519/img/pic3.jpg" alt="이미지3">
+    </div>
+
+    <br>
+    
+    <h1>inline -> block</h1>
+    <div>
+        <img src="/0519/img/pic1.jpg" alt="이미지1">
+        <img src="/0519/img/pic2.jpg" alt="이미지2">
+        <img src="/0519/img/pic3.jpg" alt="이미지3">
+    </div>
+    <div>
+        <img src="/0519/img/pic1.jpg" alt="이미지1" id="block">
+        <img src="/0519/img/pic2.jpg" alt="이미지2" id="block">
+        <img src="/0519/img/pic3.jpg" alt="이미지3" id="block">
+    </div>
+
+    <hr>
+
+    <h1>block -> inline</h1>
+    <div id="inline">
+        <img src="/0519/img/pic1.jpg" alt="이미지1">
+        <img src="/0519/img/pic2.jpg" alt="이미지2">
+        <img src="/0519/img/pic3.jpg" alt="이미지3">
+    </div>
+    <div id="inline">
+        <img src="/0519/img/pic1.jpg" alt="이미지1">
+        <img src="/0519/img/pic2.jpg" alt="이미지2">
+        <img src="/0519/img/pic3.jpg" alt="이미지3">
+    </div>
+</body>
+</html>

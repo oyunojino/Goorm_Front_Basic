@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <style>
+        nav {
+            width: 400px;
+            height: 60px;
+            background-color: #096;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            /* 
+                margin 속성 적용 X : inline
+                margin 속성 적용 O : inline-block  
+             */
+            display: inline-block; /* block -> inline */
+            margin: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        <nav> 태그
+            - 
+     -->
+     <nav>
+        <ul>
+            <li><a href="#">메일</a></li>
+            <li><a href="#">카페</a></li>
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">쇼핑</a></li>
+        </ul>
+     </nav>
+     <h1>네이버 본문입니다.</h1>
+</body>
+</html>
