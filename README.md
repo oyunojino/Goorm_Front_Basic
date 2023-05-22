@@ -42,3 +42,9 @@
         - Cross Browser
     5. Property
         - Text
+        - Background
+        - Style_ inline, block
+        - Content
+        - Box-sizing
+        - Float
+        - Position
