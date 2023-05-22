@@ -51,11 +51,11 @@
 
 ## [0522_Javascript](https://darkened-crest-275.notion.site/0522_JavaScript-bf1884f2a837497b887f3f916bc544cc)
     1. 기본 설명
-    2. Identifier_ 식별자
+    2. Identifier(식별자)
     3. Data Type
         - String
         - Number
         - Boolean
-        - 논리 연산
+        - 논리 연산_ AND, OR, NOT
         - 사칙 연산
-    4. Varibale_ 변수
+    4. Varibale(변수)
