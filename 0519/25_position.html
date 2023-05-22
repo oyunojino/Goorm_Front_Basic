@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positon</title>
+    <!-- 
+        Positon
+            - 실제 배치를 할 때 위치 지정 가능
+            - 속성
+                static   : 따로 지정하지 않아도 알아서 배치
+                relative : 알아서 배치된 상태에서 상대적인 이동
+                absolute : 절대적인 이동
+                         : 화면 비율을 움직일 때마다 계속 변경됨 
+     -->
+    <style>
+        .box1 {
+            float: left;
+            width: 150px;
+            height: 100px;
+            background-color: #00f;
+        }
+        .box2 {
+            float: left; 
+            position: relative;
+            left: -40px;
+            top: 50px;
+            width: 150px;
+            height: 100px;
+            background-color: #55f;
+        }
+        .box3 {
+            /* float: left; // 따라서 들어오기 때문에 굳이 의미가 없음  */
+            position: absolute;
+            right: 500px;
+            bottom: 700px;
+            width: 150px;
+            height: 100px;
+            background-color: #bbf;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
