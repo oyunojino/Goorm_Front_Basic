@@ -35,12 +35,11 @@
         // 외부적 제동
 
         var value = 0;
-        var startTime = new Date.getTime();
+        var startTime = new Date().getTime();
 
         while(new Date().getTime() < startTime + 1000) {
             value++;
         }
-
         alert(value);
 
     </script>
