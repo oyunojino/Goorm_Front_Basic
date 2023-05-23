@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break</title>
+    <!-- 
+        break문
+            - 반복문에서 빠져나올 때 사용
+
+     -->
+    <script>
+        // for문의 경우 1
+        //  : 조건 부분에 true라면 무한 반복
+        for(i=0 ; true ; i++) {
+            alert(i + " 번쨰 반복");
+
+            var submit = confirm('계속 하시겠습니까?');
+            if(submit == false) {
+                break;
+            }
+        } 
+
+        // for문의 경우 2
+        for(i=0 ; true ; i++) {
+            alert(i + " 번쨰 반복");
+
+            if(!confirm('계속 하시겠습니까?')) {
+                break;
+            }
+        } 
+
+        // while문의 경우
+        var i = 0;
+        alert(i + " 번쨰 반복");
+        while(confirm('계속 하시겠습니까?')) {
+            alert(i + " 번쨰 반복");
+        }
+
+        // do ~ while문의 경우
+        var i = 0;
+        do {
+            alert(i + " 번쨰 반복");
+            i++;
+        } while(confirm('계속 하시겠습니까?'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
