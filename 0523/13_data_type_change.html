@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Type_ Change</title>
+    <!-- 
+        Type Conversion(컴파일 또는 인터프리터가 변환)
+            - 연산할 경우( 암묵적 형변환 )
+                1. 숫자 * 숫자    => 숫자 * 숫자
+                2. 숫자 * '문자'  => 숫자 * 숫자
+                3.'문자' * 숫자   => 숫자 * 숫자
+                4.'문자' * '문자' => 숫자 * 숫자
+                5.'문자 * 문자'   => '문자 * 문자'
+
+            - input 자료형 => String
+
+        Type Casting(프로그래머가 변환)
+            - 강제 변환
+                문자형 : String()
+                숫자형 : Number()
+                       : 문자열, 복소수, 루트 등 자체를 입력했을 떄 숫자로 변형되지만
+                        NaN(Not A Number) 문구 출력
+                       : JS 상에서 문자열을 표현할 숫자가 없기 떄문에
+     -->
+    <script>
+        alert('52 * 273');  // 전체가 그냥 문자열
+        alert(52 * 273);    // 사칙연산 결과 
+        alert('52' * 273);  // 문자열이 숫자로 변환
+        alert(52 * '273');  // 문자열이 숫자로 변환
+        alert('52' * '273'); // 숫자로 변환해서 계산
+
+        //-----------------------------------------------------------
+
+        var input = prompt();
+        alert("typeof input 결과는? " + typeof input);
+
+        //-----------------------------------------------------------
+
+        var NumberInput = Number(input);
+        alert("NumberInput 결과는? " + NumberInput);
+        alert("typeof Number(input) 결과는? " + typeof NumberInput);
+
+        //-----------------------------------------------------------
+
+        alert("Boolean(0) 결과는? " + Boolean(0));                  // false
+        alert("Boolean('') 결과는? " + Boolean(''));                // false
+        alert("Boolean(NaN) 결과는? " + Boolean(NaN));              // false
+        alert("Boolean(null) 결과는? " + Boolean(null));            // false
+        alert("Boolean(undefined) 결과는? " + Boolean(undefined));  // false
+
+        alert("Boolean([]) 결과는? " + Boolean([]));                // true
+
+        //-----------------------------------------------------------
+        
+        // JS의 유연성
+        alert("( 0 == false ) 결과는? " + (0 == false));      // true
+        alert("( '' == 0 ) 결과는? " + ('' == 0));            // true
+        alert("( '' == false ) 결과는? " + ('' == false));    // true
+        alert("( '273' == 273 ) 결과는? " + ('273' == 273));  // true
+
+        //-----------------------------------------------------------
+
+        // 자료형 비교( === )
+        alert("( 0 === false ) 결과는? " + (0 === false));      // false
+        alert("( '' === 0 ) 결과는? " + ('' === 0));            // false
+        alert("( '' === false ) 결과는? " + ('' === false));    // false
+        alert("( '273' === 273 ) 결과는? " + ('273' === 273));  // false
+
+
+        //-----------------------------------------------------------
+
+        // typeof를 사용해 비교
+        alert("(typeof('273') == typeof(273)) 결과는? " + (typeof('273') == typeof(273)));  // false
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
