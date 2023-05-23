@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition_ short</title>
+    <!-- 
+        조건문 4
+            - 짧은 연산자
+                : AND 연산자는 둘 다 TRUE이어야 하기 때문에 'A 실행'
+                : OR 연산자는 둘 중 한 개만 TRUE이면 되기 때문에 'B 실행'
+     -->
+    <script>
+        // OR 연산자
+        true || alert('A 실행');
+        false || alert('B 실행'); // 실행
+
+        // AND 연산자
+        true && alert('A 실행');  // 실행
+        false && alert('B 실행');
+
+        //----------------------------------------------------------
+
+        var input = Number(prompt());
+
+        (input % 2 == 0) || alert("홀수 입니다.");
+        (input % 2 == 0) && alert("짝수 입니다.");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
