@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repetition_ while</title>
+    <!-- 
+        반복문 1
+            - while문
+                : 무한 반복하다가 조건에 맞지 않으면 빠져나옴
+     -->
+    <script>
+        /*
+        var treeHit = 0;
+
+        while(treeHit < 10) {
+            treeHit = treeHit + 1;
+            // alert(treeHit + " 번 찍었습니다.");
+
+            if(treeHit == 10) {
+                alert('나무를 10번 찍었습니다. ');
+            }
+        }
+
+        //----------------------------------------------------------
+        // 내부적 제동
+
+        var value = 0;
+        while (value < 5) {
+            alert(value + "번째 반복입니다.");
+
+            value++;
+        }
+*/
+        //----------------------------------------------------------
+        // 외부적 제동
+
+        var value = 0;
+        var startTime = new Date.getTime();
+
+        while(new Date().getTime() < startTime + 1000) {
+            value++;
+        }
+
+        alert(value);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
