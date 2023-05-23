@@ -63,3 +63,19 @@
         - Boolean
             * AND, OR, NOT
     4. Varibale(변수)
+        - prompt()
+        - confirm()
+    5. Array(배열)
+    6. Condition Statement(조건문)
+        - if
+        - switch
+        - 삼항 연산자
+        - 짧은 연산자
+    7. Repetition Statement(반복문)
+        - while
+        - do ~ while
+        - for
+        - for ~ in
+        - 중첩
+    8. break
+    9. continue
