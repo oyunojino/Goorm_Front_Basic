@@ -55,6 +55,26 @@
             alert("코드 B 실행");
         }
         hello();
+
+        //-----------------------------------------------------------
+        // 재귀함수 : 함수 내부에서 자기 자신의 함수를 호출하여 무한 루프에 빠질 수 있음
+
+        // function hello() {
+        //     alert("hello");
+        //     hello();
+        // }
+
+        // factorial
+        // 하노이의 탑?
+        function factorial(num) {
+            if(num == 0) {
+                return 1;
+            } else {
+                return (num * factorial(num-1));
+            }
+        }
+        factorial(4);
+
     </script>
 </head>
 <body>
