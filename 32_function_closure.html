@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Closure</title>
+    <script>
+        // return에 함수를 작성하는 이유
+        // -> closer 기능
+        function alertFunc() {
+            return function() {
+                alert("hello js");
+            }
+        }
+        // 첫번재 괄호 : alertFunc() / 두번쨰 괄호 : return 뒤 익명 함수
+        alertFunc()();
+
+        //-----------------------------------------------------------
+
+        // closer 기능 관련 실습
+        function test() {
+            var output = "My name is " + name;
+        }
+        // output은 지역변수이기 떄문에 출력 x
+        //alert(output);
+
+
+        function test1(name) {
+            var output1 = "My name is " + name;
+            return function() {
+                alert(output1);
+            }
+        }
+        test1("yun")();
+
+        //-----------------------------------------------------------
+
+        function test2(name) {
+            var output2 = "My name is " + name;
+            return function() {
+                alert(output2);
+            }
+        }
+
+        var aaa = test2("web");
+        var bbb = test2("server");
+
+        aaa();
+        bbb();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
