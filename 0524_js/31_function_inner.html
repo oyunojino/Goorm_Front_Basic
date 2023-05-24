@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Inner</title>
+    <!-- 
+        함수 구조
+            function outer() {
+                function inner_1() {
+                    // 코드
+                }
+                function inner_2() {
+                    // 코드
+                }
+            }
+     -->
+    <script>
+        // 피타고라스 정리
+        function pythagoras(width, height) {
+
+            function square(x) {
+                return x * x;
+            }
+
+            // 1. 일반적인 사용법
+            // return Math.sqrt(width * width + height * height);
+            // 2. 내부 함수 사용법
+            return Math.sqrt(square(width) + square(height));
+        }
+        alert(pythagoras(3,4));
+
+        //-----------------------------------------------------------
+        // 만약 다른 개발자가 같은 이름으로 함수를 생성했을 때, 필요한 함수를 계산하는 함수 내로 이동
+
+        function square() {
+            return 10;
+        }
+
+        
+        //-----------------------------------------------------------
+        // 3. 함수도 자료형이기 때문에 인자로 받아서 사용 가능
+        function callTenTimes(cb) {
+            // 10번 반복할 함수
+            for(var i=0 ; i<10 ; i++) {
+                cb();
+                console.log(i+1);
+            }
+        }
+
+        var callback = function () {
+            // 출력할 코드
+            alert("코드 반복");
+        }
+
+        callTenTimes(callback);
+
+
+        //-----------------------------------------------------------
+        // 4. 함수 호출부터 정의까지 한번에 해줄 수 있음
+        function callTenTimes2(cb) {
+            // 10번 반복할 함수
+            for(var i=0 ; i<10 ; i++) {
+                cb();
+                console.log(i+1);
+            }
+        }
+
+        callTenTimes2 (function() {
+            alert("함수 호출");
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
