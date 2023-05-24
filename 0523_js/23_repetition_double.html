@@ -10,7 +10,7 @@
             ****
             *****
         */
-/*
+
         var num = prompt('숫자를 입력하세요.');
         var star = '';
 
@@ -18,10 +18,9 @@
             for(j=0 ; j<i+1 ; j++) {
                 star += '*'
             }
-            star += '<br>'
+            star += '\n'
         } 
-        document.write(star + '<br>');
-*/
+        console.log(star);
 
         //----------------------------------------------------------
         /*
@@ -30,25 +29,7 @@
            *****
           *******
         */
-/*
         var star1 = '';
-        var num2 = prompt('짝수를 입력하세요.');
-        var middle = num2 / 2 + 1;
-        alert(middle);
-
-        for(i=0 ; i<num2 ; i++) {
-            for(j=0 ; j<middle+i ; j++) {
-                if(( (middle-i) <= j ) && (j <= (middle+i))) {
-                    star1 += '*';
-                }
-                else {
-                    star1 += "&nbsp";
-                }
-            }
-            star1 += '<br>';
-        }
-*/
-        
         for(i=0 ; i<4 ; i++) {
             for(j=0 ; j<7 ; j++) {
                 if(( (3-i) <= j ) && (j <= (3+i))) {
@@ -60,7 +41,6 @@
             }
             star1 += '<br>';
         }
-        
 
         document.write(star1);
         
