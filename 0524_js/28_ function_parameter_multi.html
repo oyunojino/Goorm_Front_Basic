@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parameter Multi</title>
+    <!-- 
+        Array() 함수는 배열을 만들어주는 함수
+            - 인자 X      : 빈 배열 생성
+            - 인자 1개    : 배열의 개수 지정
+            - 인자 여러개 : 개수에 맞춰서 각 인자들로 이루어진 배열 생성
+
+        가변 인자
+            - 매개 변수의 개수가 달라지는 함수
+            - 인자의 개수를 아무리 많이 사용해도 인자를 전부 사용
+            - arguments라는 변수를 찾아보면 찾아볼 수 없음
+            - 함수가 생성되면서 arguments라는 변수를 가지고 생성됨
+            - 함수를 생성하고 인자를 넣어주면 arguments가 인자를 가지고 있음
+            - arguments를 사용하면 인자의 개수와 사완없이 코드 동작 가능
+                ex ) 파이썬 def test(*a); // 인자 개수와 상관없이 모두 수용
+     -->
+    <script>
+        
+        var arr1 = Array();
+        var arr2 = Array(10); // 숫자 : 배열의 자리수만 지정
+        var arr3 = Array(273, 'abc', '가나다라'); // 여러개 : 각 요소를 각 자리에 지정
+
+        alert(arr1 + "\n" + arr2 + "\n" + arr3);
+
+        //----------------------------------------------------------
+
+        function sumAll_1() {
+            alert(typeof arguments + " : " + arguments.length);
+        }
+        sumAll_1(1, 2, 5, 7, 9, 11, 13);
+
+        //----------------------------------------------------------
+
+        var sum = 0;
+        function sumAll_2(params) {
+            
+            for(var i=0 ; i < arguments.length ; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        alert(sumAll_2(1, 2, 5, 7, 9, 11, 13));
+
+        //----------------------------------------------------------
+
+        function func() {
+            var length = arguments.length;
+
+            // 길이 = 0(입력값 X)
+            if(arguments.length == 0) {
+
+            } else if(arguments.length == 1) {
+
+            } else {
+                
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
