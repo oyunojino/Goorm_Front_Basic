@@ -52,7 +52,7 @@
         - Float
         - Position
 
-## [0522~0523_Javascript](https://darkened-crest-275.notion.site/0522_JavaScript-bf1884f2a837497b887f3f916bc544cc)
+## [0522~0526_Javascript](https://darkened-crest-275.notion.site/0522_JavaScript-bf1884f2a837497b887f3f916bc544cc)
     1. 기본 설명
     2. Identifier(식별자)
     3. Data Type
@@ -79,3 +79,11 @@
         - 중첩
     8. break
     9. continue
+    10. function
+        - 개요
+        - Parameter(매개 변수)
+        - Parameter(가변 인자)
+        - return
+        - Inner
+        - Encoding / Decoding
+        - Closure
