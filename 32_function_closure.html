@@ -41,12 +41,21 @@
             }
         }
 
-        var aaa = test2("web");
-        var bbb = test2("server");
+        // 출력 형식_1 -----------------------------------------
+        // "My name is web" -> undefined
+        var aaa = test2("web")();
 
-        aaa();
+        // 출력 형식_2 -----------------------------------------
+        // test2 함수에 인자가 들어가 있는 상태가 bbb에 저장됨
+        var bbb = test2("server");
+        // "My name is server"
         bbb();
-        
+
+        // 출력 형식_3 -----------------------------------------
+        // "My name is js"
+        test2("js")();
+
+
     </script>
 </head>
 <body>
