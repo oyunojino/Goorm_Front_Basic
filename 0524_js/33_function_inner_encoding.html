@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Inner Encoding</title>
+    <!-- 
+        # [UTF-8 방식]인코딩 vs 디코딩
+            - 인코딩 : 시스템이 이해할 수 있도록 변형(사용자 -> 시스템)
+                     : 페이지 혹은 url 주소 변형과 관련
+                     : encodeURIComponent()
+            - 디코딩 : 시스템이 인식했던 것을 다시 사용자에게 변형(사용자 <- 시스템)
+                     : decodeURIComponent()
+
+        # URL vs URI
+            - URL : 경로가 직접 보이는 형태
+                    ex) www.test.com/picture
+            - URI : 경로를 보이지 않는 형태
+                    ex) tel:+1234567890
+            ┌----URI----┐
+            | ┌--URL--┐ |
+            | └-------┘ |
+            └-----------┘
+     -->
+     <script>
+        var URI = "https://www.test.com/test=테스트입니다.";
+
+        alert(URI);
+        alert(encodeURIComponent(URI));
+        alert(decodeURIComponent(encodeURIComponent(URI)));
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
