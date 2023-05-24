@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Closure</title>
+    <script>
+        function createCounter() {
+            var count = 0;
+            function increment() {
+                count++;
+                alert('Current count : ' +  count);
+            }
+            return increment;
+        }
+
+        var counter = createCounter();
+        counter();
+        counter();
+        counter();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
