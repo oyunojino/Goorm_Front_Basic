@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable_ var, let</title>
+    <!-- 
+        변수 기능 차이(스코프, 호이스팅)
+            - var : 변수 선언 시 함수 내/외부에서 언제든지 사용 가능
+                  : var 변수 = (지역변수 + 전역변수)
+                  : 재할당 가능
+            - let : 변수 선언 시 함수 내에서만 사용 가능
+                  : 함수 내부에서 let으로 변수 선언 시 변수 내부에서만 사용 가능
+                  : let 변수 = 지역변수
+                  : 재할당 불가능
+     -->
+     <script>
+        function func1() {
+            if(true) {
+                let x = 10;
+                var y = 20;
+                alert(x);
+                alert(y);
+            }
+
+            alert(x);
+            alert(y);
+        }
+        func1();
+
+        //-----------------------------------------------------------
+
+        function func2() {
+            let a = 1;
+            // let a = 2;
+            a = 3;
+
+            var b = 1;
+            var b = 2;
+            b = 3;
+        }
+        func2();
+        
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
