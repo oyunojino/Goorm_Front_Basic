@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Manage</title>
+    <script>
+        /*
+        student1 = { name : "student1", kor : 95, math : 90, eng : 70, sci : 80 }
+        student2 = { name : "student2", kor : 95, math : 90, eng : 70, sci : 80 }
+        student3 = { name : "student3", kor : 95, math : 90, eng : 70, sci : 80 }
+        student4 = { name : "student4", kor : 95, math : 90, eng : 70, sci : 80 }
+        student5 = { name : "student5", kor : 95, math : 90, eng : 70, sci : 80 }
+        student6 = { name : "student6", kor : 95, math : 90, eng : 70, sci : 80 }
+        student7 = { name : "student7", kor : 95, math : 90, eng : 70, sci : 80 }
+        student8 = { name : "student8", kor : 95, math : 90, eng : 70, sci : 80 }
+        student9 = { name : "student9", kor : 95, math : 90, eng : 70, sci : 80 }
+        */
+
+        // 데이터 관리를 위해 배열로 지정
+        students = [];
+        students.push({ name : "student1", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student2", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student3", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student4", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student5", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student6", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student7", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student8", kor : 95, math : 90, eng : 70, sci : 80, });
+        students.push({ name : "student9", kor : 95, math : 90, eng : 70, sci : 80, });
+
+        // 객체 = 배열의 요소
+        // 문제1 
+        //  배열의 요소로 들어간 객체 안에 함수를 추가하기
+        //      getSum() 함수 : 모든 점수를 더하는 함수
+        //      getAvg() 함수 : 모든 점수의 평균을 구하는 함수
+
+        for(var i in students) {
+            students[i].getSum = function() {
+                return this.kor + this.math + this.eng + this.sci;
+            }
+
+            students[i].getAvg = function() {
+                return this.getSum()/4;
+            }
+        }
+
+
+        //-----------------------------------------------------------
+        // 오류
+
+        var output = "이름\t합계\t총합\n";
+        for(var j in students) {
+            // output += students[j].name + "\t" + students[j].getSum() + "\t" + students[j].getAvg() + "\n";
+            with(students[j]) {
+                output += name + "\t" + getSum() + "\t" + getAvg() + "\n";
+            }
+        }
+
+        console.log(output);
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
