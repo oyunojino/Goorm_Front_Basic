@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <!-- 
+        배열은 정수형 위치 인덱스 o
+            -> for/for-in 전부 사용 가능
+        객체는 정수형 위치 인덱스 x
+            -> for ~ in 사용 가능
+     -->
+    <script>
+        var product = {
+            name : "Visual Studio Code",
+            price : "15,000,000원",
+            language : "한국어",
+            supportOS : "win 32/64",
+            subscription : true
+        }
+
+        // 객체 내 속성이 추가됨
+        // for ~ in 구문 사용시 배열은 정수형 위치 인덱스를 가져옴
+        var output = '';
+        for(var k in product) {
+            output += k + ", ";
+        }
+        console.log(output);
+
+        //-----------------------------------------------------------
+
+        var output1 = '';
+        for(var k in product) {
+            output1 += k + " : " + product[k] + "\n";
+        }
+        console.log(output1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
