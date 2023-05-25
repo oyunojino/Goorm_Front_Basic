@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Method</title>
+    <!-- 
+        Key(속성) : Value(속성값)
+            - 띄어쓰기 또는 특수문자들이 포함된 key는 (object.key) 형태로 호출 불가능
+     -->
+    <script>
+        // 배열   : [] 형태의 객체
+        // 객체   : (key : value) 형태의 객체
+        //        : key   = 속성
+        //        : value = 속성값
+        // 메서드 : 속성이 함수라면 
+
+        var ob = {
+            //객체
+            number : 273,
+            string : 'js',
+            boolean : true,
+            //배열
+            array : [1,2,3,4,5],
+            // 매서드
+            func : function() {
+
+            }
+        }
+
+        //-----------------------------------------------------------
+
+        var person = {
+            name : "yun",
+            eat : function() {
+                alert("반갑습니다.");
+            }
+        }
+        console.log(person.name);
+        // 매서드를 사용하려면 객체.메서드명()
+        person.eat();
+
+        //-----------------------------------------------------------
+        
+        // 자바스크립트 특징
+        //  -> 객체 안에 속성을 사용하고 싶은 경우 (this.속성)을 사용해야함 
+        var person1 = {
+            name : "yun",
+            eat : function(food) {
+                alert(this.name + "이 " + food + "을 먹습니다.");
+            }
+        }
+        console.log(person1.name);
+        // 매서드를 사용하려면 객체.메서드명()
+        person1.eat("밥");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
