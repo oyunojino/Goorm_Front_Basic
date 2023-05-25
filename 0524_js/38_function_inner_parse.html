@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Inner Parse</title>
+    <!-- 
+        숫자 변환
+            - Number() 함수 사용시 문자열이나 특수 기호들이 있다면 오류
+            - parseInt() / parseFloat()
+            - 주의 사항
+                1. 숫자 '0'이 앞에 있다면 8진수로 인식
+                2. '0x'이 앞에 있다면 16진수로 인식
+     -->
+    <script>
+        var won = '1000원';
+        var dollar = '1400원';
+
+        console.log(Number(won) + " / " + Number(dollar)); // NaN / NaN
+
+        //-----------------------------------------------------------
+
+        var won1 = '1000원';
+        var dollar1 = '1.4\\';
+
+        console.log(parseInt(won) + " / " + parseFloat(dollar)); // 1000 / 1400
+
+        //-----------------------------------------------------------
+
+        console.log("16진수 : " + parseInt('0x273')); // 627
+        console.log("10진수 : " + parseInt('273'));   // 273
+        console.log("8진수 : " + parseInt(0273));    // 187
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
