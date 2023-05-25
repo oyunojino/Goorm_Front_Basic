@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Key : Value</title>
+    <!-- 
+        Key(속성) : Value(속성값)
+            - 띄어쓰기 또는 특수문자들이 포함된 key는 (object.key) 형태로 호출 불가능
+     -->
+    <script>
+        var product = {
+            pd_name : "7일 건조 망고",
+            pd_type : "당절임",
+            pd_made : "필리핀"
+        }
+
+        console.log(product);
+        console.log(typeof product);
+
+        console.log(product['pd_name']);
+
+        console.log(product.pd_type);
+
+        //-----------------------------------------------------------
+        
+
+        var ob = {
+            'ab cd ef' : 273,
+            'with !@#$%^&*' : 52
+        }
+        // 아래 형태로 호출 불가능
+        // console.log(product.ab cd ef);
+
+        //-----------------------------------------------------------
+
+        // 배열   : [] 형태의 객체
+        // 객체   : (key : value) 형태의 객체
+        //        : key   = 속성
+        //        : value = 속성값
+        // 메서드 : 속성이 함수라면 
+
+        var ob = {
+            //객체
+            number : 273,
+            string : 'js',
+            boolean : true,
+            //배열
+            array : [1,2,3,4,5],
+            // 매서드
+            func : function() {
+
+            }
+        }
+
+        //-----------------------------------------------------------
+
+        var person = {
+            name : "yun",
+            eat : function() {
+                alert("반갑습니다.");
+            }
+        }
+        console.log(person.name);
+        // 매서드를 사용하려면 객체.메서드명()
+        person.eat();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
