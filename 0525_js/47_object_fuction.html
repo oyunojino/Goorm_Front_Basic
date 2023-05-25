@@ -7,20 +7,22 @@
         // 46번에서 입력한 코드
         //  : 각각의 데이터를 입력해야하기 때문에 대량의 데이터 삽입에 부적합
         function makeStudents(name, kor, math, eng, sci) {
+
+            // name은 student의 지역변수 느낌
             student = {
-                name : name,
-                kor : kor,
-                math : math,
-                eng : eng,
-                sci : sci,
-                getSum : function() {
-                    return this.kor + this.math + this.eng + this.sci;
+                u_name : name,
+                u_kor : kor,
+                u_math : math,
+                u_eng : eng,
+                u_sci : sci,
+                u_getSum : function() {
+                    return this.u_kor + this.u_math + this.u_eng + this.u_sci;
                 },
-                getAvg : function() {
-                    return this.getSum() / 4;
+                u_getAvg : function() {
+                    return this.u_getSum() / 4;
                 },
-                toString : function() {
-                    return this.name + "\t" + this.getSum() + "\t" + this.getAvg() + "\n";
+                u_toString : function() {
+                    return this.u_name + "\t" + this.u_getSum() + "\t" + this.u_getAvg() + "\n";
                 }
             }
             return student;
@@ -35,9 +37,8 @@
 
         var output = "이름\t합계\t총합\n";
         for(var i in students) {
-            output += students[i].toString() +"\n";
+            output += students[i].u_toString() +"\n";
         }
-        // undefined
         console.log(output);
     </script>
 </head>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instance</title>
+    <!-- 
+        생성자 함수
+            - AS O
+        일반 함수
+            - AS X
+     -->
+    <script>
+        function MakeStudents(name, kor, math, eng, sci) {
+            this.u_name = name,
+            this.u_kor = kor,
+            this.u_math = math,
+            this.u_eng = eng,
+            this.u_sci = sci
+        }
+
+        function MakeStudents2(name, kor, math, eng, sci) {
+            student = {
+                u_name : name,
+                u_kor : kor,
+                u_math : math,
+                u_eng : eng,
+                u_sci : sci,
+            }
+            return student;
+        }
+
+        var students = new MakeStudents("str01", 90, 95, 80, 85);
+        var students2 = MakeStudents2("str02", 90, 95, 80, 85);
+
+        alert(students instanceof MakeStudents);   // true
+        alert(students2 instanceof MakeStudents2); // false
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

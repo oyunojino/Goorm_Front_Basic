@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor new</title>
+    <!-- 
+        생성자 함수 생성 규칙
+            - new를 붙이면 생성자 함수가 됨
+            1. 생성자 함수의 시작은 무조건 대문자!!!!
+            2. 
+     -->
+    <script>
+        function MakeStudent() {
+
+        }
+        var student = new MakeStudent();
+
+        //-----------------------------------------------------------
+
+        // 객체를 직접 지정해서 만들어주는 것이 아닌 속성에 대한 속성값을 넣어주는 부분
+        // 객체 형태로 동작을 일으킴
+        // this는 자신을 필요로 하는 곳에서 모양을 바꿀 수 있음!!
+        // 함수의 return문이 없음
+
+        function MakeStudents(name, kor, math, eng, sci) {
+            this.u_name = name,
+            this.u_kor = kor,
+            this.u_math = math,
+            this.u_eng = eng,
+            this.u_sci = sci,
+            this.u_getSum = function() {
+                return this.u_kor + this.u_math + this.u_eng + this.u_sci;
+            },
+            this.u_getAvg = function() {
+                return this.u_getSum() / 4;
+            },
+            this.u_toString = function() {
+                return this.u_name + "\t" + this.u_getSum() + "\t" + this.u_getAvg() + "\n";
+            }
+        }
+
+        students = [];
+        students.push(new MakeStudents('str1', 90, 85, 70, 95));
+        students.push(new MakeStudents('str2', 90, 85, 70, 95));
+        students.push(new MakeStudents('str3', 90, 85, 70, 95));
+        students.push(new MakeStudents('str4', 90, 85, 70, 95));
+        students.push(new MakeStudents('str5', 90, 85, 70, 95));
+
+        var output = "이름\t합계\t총합\n";
+        for(var i in students) {
+            output += students[i].u_toString() +"\n";
+        }
+        console.log(output);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

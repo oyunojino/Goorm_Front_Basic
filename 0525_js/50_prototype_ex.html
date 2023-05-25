@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+    <!-- 
+        프로토타입
+            - 메모리를 최적화 해서 사용하자!!!
+            - 일반 함수는 인식되지 않아 생성자 함수에서만 가능
+     -->
+    <script>
+        function MakeStudents(name, kor, math, eng, sci) {
+
+            // name은 student의 지역변수 느낌
+            student = {
+                u_name : name,
+                u_kor : kor,
+                u_math : math,
+                u_eng : eng,
+                u_sci : sci,
+            }
+            return student;
+        }
+        MakeStudents.prototype.u_getSum = function() {
+            return this.u_kor + this.u_math + this.u_eng + this.u_sci;
+        }
+        MakeStudents.prototype.u_getAvg = function() {
+            return this.u_getSum() / 4;
+        }
+        MakeStudents.prototype.u_toString = function() {
+            return this.u_name + "\t" + this.u_getSum() + "\t" + this.u_getAvg() + "\n";
+        }
+
+        students = [];
+        students.push(MakeStudents('str1', 90, 85, 70, 95));
+        students.push(MakeStudents('str2', 90, 85, 70, 95));
+        students.push(MakeStudents('str3', 90, 85, 70, 95));
+        students.push(MakeStudents('str4', 90, 85, 70, 95));
+        students.push(MakeStudents('str5', 90, 85, 70, 95));
+
+        var output = "이름\t합계\t총합\n";
+        for(var i in students) {
+            output += students[i].u_toString() +"\n";
+        }
+        console.log(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
