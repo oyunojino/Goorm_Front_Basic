@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function isFinite() / isNaN()</title>
+    <!-- 
+        Division
+            : '0' 또는 문자열로 나누게 되면 JS는 무한대로 취급함
+            : 문자열로 나누면 숫자로 표현할 수 없기 때문
+        
+        isFinite()
+            : 유한한 수 인지 확인 가능
+
+        isNaN()
+            : NaN인지 확인 가능
+
+
+        Infinity
+            : 무한대도 양수 / 음수 구별
+            -> 모든 무한대가 같진 않음
+
+        NaN
+            : 숫자로 표현은 가능하나 비교할 수 없음
+
+     -->
+    <script>
+        var num1 = 1/0;
+        var num2 = 1/'A';
+
+        alert(num1 + " / " + num2);
+
+        //-----------------------------------------------------------
+
+        alert(isFinite(num1) + " / " + isNaN(num2));
+
+        //-----------------------------------------------------------
+
+        // 음수 무한대
+        num = -10 / 0;
+
+        if(num == Infinity) {
+            alert("무한대입니다.");
+        } else {
+            alert("무한대가 아닙니다.");
+        }
+
+        //-----------------------------------------------------------
+
+        if(NaN == NaN) {
+            alert("NaN과 NaN은 같습니다.");
+        } else {
+            alert("NaN과 NaN은 같지 않습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
