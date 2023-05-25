@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Keyword</title>
+    <script>
+        var student = {
+            type : 'output, output1',
+            name : "yun",
+            kor : 95,
+            math : 90,
+            eng : 70,
+            sci : 80
+        }
+        // 키워드 1 -> in
+        console.log("수학이라는 속성이 있는지? " + ("math" in student));
+        console.log("사회이라는 속성이 있는지? " + ("soc" in student));
+
+        //-----------------------------------------------------------
+
+
+        // 키워드 2 -> with
+        //  - 매번 작성하는 객체 이름을 생략 가능
+        //  - with 키워드 내부는 전부 작성된 객체 이름을 사용
+
+        // 키워드 사용 전
+        var output = "";
+        output += "분류 : " + student.type + "\n";
+        output += "이름 : " + student.name + "\n";
+        output += "국어 : " + student.kor + "\n";
+        output += "수학 : " + student.math + "\n";
+        output += "영어 : " + student.eng + "\n";
+        output += "과학 : " + student.sci + "\n";
+        output += "총점 : " + (student.kor + student.math + student.eng + student.sci) + "\n";
+        console.log(output);
+
+        // 키워드 사용 후
+        var output1 = "";
+        with(student) {
+            output1 += "분류 : " + type + "\n";
+            output1 += "이름 : " + name + "\n";
+            output1 += "국어 : " + kor + "\n";
+            output1 += "수학 : " + math + "\n";
+            output1 += "영어 : " + eng + "\n";
+            output1 += "과학 : " + sci + "\n";
+            output1 += "총점 : " + (kor + math + eng + sci) + "\n";
+        }
+        console.log(output1);
+
+        //-----------------------------------------------------------
+
+        // 키워드 3 -> window.
+        //  - 전역 변수(output2)와 지역 변수(output2)가 충돌할 때 사용
+        //  - 전역 변수를 사용하겠다고 선언
+        var student1 = {
+            type : 'output2',
+            name : "yun",
+            kor : 95,
+            math : 90,
+            eng : 70,
+            sci : 80,
+            output2 : "이미 있다면..."
+        }
+
+        var output2 = "";
+
+        with(student1) {
+            window.output2 += "분류 : " + type + "\n";
+            window.output2 += "이름 : " + name + "\n";
+            window.output2 += "국어 : " + kor + "\n";
+            window.output2 += "수학 : " + math + "\n";
+            window.output2 += "영어 : " + eng + "\n";
+            window.output2 += "과학 : " + sci + "\n";
+            window.output2 += "총점 : " + (kor + math + eng + sci) + "\n";
+            window.output2 += "output2 : " + sci + "\n";
+        }
+        console.log(output2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
