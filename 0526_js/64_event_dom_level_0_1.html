@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event DOM level_0 1</title>
+    <script>
+        window.onload = function() {
+            var a1 = document.getElementById("A");
+            var c1 = document.getElementById("C");
+
+            // 한번만 실행함
+            a1.onclick = function() {
+                alert("hi");
+                a1.onclick = null;
+            }
+
+            // 바로 이벤트 연결
+            c1.onclick = function() {
+                alert("hello");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="A">Click</h1>
+    <h1 id="C">Click</h1>
+</body>
+</html>

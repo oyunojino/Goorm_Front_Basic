@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event DOM level_0 2</title>
+    <script>
+        window.onload = function() {
+            var a1 = document.getElementById("A").onclick = function() {
+                // alert(this);
+                this.style.color = "red";
+                this.style.backgroundColor = "blue";
+            };
+        }
+    </script>
+</head>
+<body>
+    <h1 id="A">Click</h1>
+</body>
+</html>

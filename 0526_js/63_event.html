@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <!-- 
+        Event(사건)
+            - 사용자(click,...) 또는 앱 자체에서 발생 가능
+                ex) 마우스 이벤트
+
+            - 이벤트 연결 방법(4가지)
+                : DOM 레벨에 따라 2가지로 분류되고 또다시 추가로 2가지씩 분리되어 총 4가지
+                DOM LEVEL 0
+                1. 고전 이벤트 모델
+                2. 인라인 이벤트 모델
+                DOM LEVEL 1
+                1. MS IE 이벤트 모델
+                2. 표준 이벤트 모델
+     -->
+    <script>
+        // onload
+        //  1. on(이름) = 속성
+        //  2. 이벤트 함수 안에 동작할 함수를 추가한다면
+        //          -> inner함수 = 핸들러
+
+        // ex) click => 이벤트명 / .onClick => 이벤트 속성 / whenClick => 이벤트 핸들러
+        window.onload = function() {
+            var header = document.getElementById('head');
+
+            function whenClick() {
+                alert('click');
+            }
+            // header 객체 이벤트 속성을 통해 이벤트 핸들러랑 연결
+            header.onclick = whenClick;
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
