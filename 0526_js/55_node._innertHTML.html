@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node innerHTML</title>
+    <!-- 
+        직접 body 태그 내에 내용 추가 가능
+     -->
+    <script>
+        window.onload = function() {
+            var output = "";
+
+            output += "<ul>";
+            output += "     <li>HTML</li>";
+            output += "     <li>CSS</li>";
+            output += "     <li>JS</li>";
+            output += "</ul>";
+
+            document.body.innerHTML = output;
+            // 내용 추가 가능
+            document.body.innerHTML += '<h1>제목1</h1>';
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
