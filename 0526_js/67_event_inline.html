@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Event Inline</title>
     <script>
-        window.onload = function() {
-            
+        function whenClick() {
+            alert("warn");
         }
     </script>
 </head>
 <body>
-    <h1 onclick="alert('hello');">Click</h1>
-    <h1 onclick="var alpha=30; alert(alpha);">Click</h1>
+    <!-- 인라인에서 직접 이벤트를 발생 -->
+    <h1 onclick="alert('hello');">Click_직접 입력</h1>
+    <h1 onclick="var alpha=30; alert(alpha);">Click_변수 초기화</h1>
+
+    <!-- 코드 간소화를 위해서 script 태그 내부에 함수를 정의하고 끌어다 씀 -->
+    <h1 onclick="whenClick()">Click_함수 사용</h1>
 </body>
 </html>
