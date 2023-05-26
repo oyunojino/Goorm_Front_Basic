@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node getElementsByTagName</title>
+    <!-- 
+        태그 이름을 이용하여 문서 객체를 가져옴(배열)
+
+            - getElementsByTagName() 
+            - getElementsById()       : CSS에서 id 선택자를 이용
+            - getElementsByName()     : 개별적으로 문서 객체를 지정
+     -->
+    <script>
+        window.onload = function() {
+            var array = document.getElementsByTagName('h1');
+            array[0].innerHTML = "새로 지정된 제목1";
+            array[1].innerHTML = "새로 지정된 제목2";
+        }
+        
+        //-----------------------------------------------------------
+
+
+        window.onload = function() {
+            var array1 = document.getElementsByTagName('h2');
+            for(var i=0 ; i<array1.length ; i++) {
+                array1[i].innerHTML = "새로 지정된 내용" + (Number(i)+1);
+            } 
+        }
+
+        // window.onload = function() {
+        //     var array1 = document.getElementsByTagName('h2');
+        //     for(var i in array1) {
+        //         array1[i].innerHTML = "새로 지정된 내용" + (Number(i)+1);
+        //     } 
+        // }
+
+
+        //-----------------------------------------------------------
+        // for ~ in 구문이 안되는 이유...?
+        //      - 다른 속성들이 등장
+        //      - for 또는 forEach 구문 사용
+        window.onload = function() {
+            var array1 = document.getElementsByTagName('h2');
+            var output1 = '';
+            for(var i in array1) {
+                output += i +"\n";
+            } 
+            alert(output1);
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>제목1</h1>
+    <h1>제목2</h1>
+
+    <br>
+    
+    <h2>내용1</h2>
+    <h2>내용2</h2>
+    <h2>내용3</h2>
+    <h2>내용4</h2>
+    <h2>내용5</h2>
+</body>
+</html>
