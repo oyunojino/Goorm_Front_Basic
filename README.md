@@ -1,8 +1,11 @@
 # goorm_front
 
-## 연습해보기
-[Exercism](https://exercism.org/)   
-[백준](https://www.acmicpc.net/)
+## 참고 자료
+[1. Exercism](https://exercism.org/)   
+[2. 백준 -> 문제](https://www.acmicpc.net/)
+
+[3. JS 공식 홈페이지](https://ko.javascript.info/)
+
 
 ## [0515_OT, AWS](https://darkened-crest-275.notion.site/20230515_OT-1a5ebd83eabe4ab2bc198a2a2749d458)
     01. OT
@@ -54,7 +57,7 @@
         - Position
 
 ## [0522~0526_Javascript](https://darkened-crest-275.notion.site/0522_JavaScript-bf1884f2a837497b887f3f916bc544cc)
-    01. [자바스크립트 공식 홈페이지](https://ko.javascript.info/)
+    01. 
     02. Identifier(식별자)
     03. Data Type
         - String
