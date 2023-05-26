@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>DOM</title>
     <!-- 
-        DOM(Document Object Model)
+        # DOM(Document Object Model)
             - html 태그 객체를 인식할 떄 사용(추가 / 수정 / 제거)
             - 동적으로 html 태그들을 제어 가능
             - 코드 간소화
@@ -13,9 +13,22 @@
                 * 문서 객체 : 객체 범위가 넓음
                                 (자료형에서 사용하는 객체, 메모리에 저장된 형태도 객체,...)
                 * 노드
+                    텍스트 노드 : 텍스트 관련 노드
+                    일반 노드   : img 태그 같은 텍스트와 관련 없는 노드
+                    요소 노드   : 태그 요소
+
+        # 정적으로 문서 객체 생성 : body 태그 내에서 태그를 이용하여 웹 문서를 구성하는 것
+        # 동적으로 문서 객체 생성 : JS를 이용하여 웹 문서를 구성하는 것
+
      -->
+     <script>
+        // body 태그 내의 동작을 완료한 다음 window.onload가 실행됨
+        window.onload = function() {
+            var h = document.getElementById('head');
+        }
+     </script>
 </head>
 <body>
-    
+    <h1 id="head">제목1</h1>
 </body>
 </html>
