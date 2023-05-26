@@ -3,6 +3,9 @@
 ## [Exercism](https://exercism.org/)
     - Language Tracks
 
+## [백준](https://www.acmicpc.net/)
+    - 예제 문제 풀어보기
+
 ## [0515_OT, AWS](https://darkened-crest-275.notion.site/20230515_OT-1a5ebd83eabe4ab2bc198a2a2749d458)
     01. OT
     02. 개발 환경 설정
@@ -87,3 +90,24 @@
         - Inner
         - Encoding / Decoding
         - Closure
+        - eval()
+        - infinite() / inNaN()
+        - parseInt() / parseFloat()
+    11. 객체지향
+        - 유형
+            * Array
+            * Key : Value
+            * Method
+            * index
+    12. Key : Value
+        - Keyword
+            * in
+            * with
+            * window.변수명
+        - 동적으로 추가 & 삭제
+        - 데이터 관리
+        - 함수 적용
+    13. 생성자 함수
+        - Prototype(프로토타입)
+            * 프로토타입은 무조건 생성 함수에서만 실행
+        - Instance(인스턴스)
