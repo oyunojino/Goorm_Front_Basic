@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node General</title>
+    <script>
+        // img 태그를 생성하고 body에 연결하기
+        //  1. img 노드 != 텍스트 노드
+        //  2. 같이 쓰이는 속성
+
+        window.onload = function() {
+            var img = document.createElement('img');
+            img.src = "../0526_js/img/road.jpg";
+            img.width = 500;
+            img.height = 100;
+            document.body.appendChild(img);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
