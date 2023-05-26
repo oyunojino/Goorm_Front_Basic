@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node Text</title>
+    <!-- 
+        // 코드 순서 상관 X
+        
+        1. 요소 노드 작성_createElement(태그명)
+        2. 텍스트 노드 작성_createTextNode(내용)
+        ------------ <body> 연결 고리가 없는 상태라서 출력 X -----------
+        3. 요소 노드와 텍스트 노드 연결_ 요소노드.appendChild(텍스트노드)
+     -->
+     <script>
+        window.onload = function() {
+            // 요소 노드 생성 -> h1
+            var header = document.createElement('h1');
+            // 텍스트 노드 생성 -> 제목1
+            var textNode = document.createTextNode('제목1');
+
+
+            // 요소 노드와 텍스트 노드 연결
+            header.appendChild(textNode);
+            // body 태그 내로 연결
+            document.body.appendChild(header);
+        }
+     </script>
+</head>
+<body>
+
+</body>
+</html>
