@@ -14,18 +14,32 @@
             img.width = 500;
             img.height = 100;
             document.body.appendChild(img);
-        }
 
-
-        // 일반노드.setAttribute(속성, 속성값) : 속성이 없을 경우를 대비하여 사용(속성과 속성값 지정)
-        window.onload = function() {
-            var img = document.createElement('img');
-            img.setAttribute("src", "../0526_js/img/pic1.jpg");
+            // 일반노드.setAttribute(속성, 속성값) : 속성이 없을 경우를 대비하여 사용(속성과 속성값 지정)
+            var img2 = document.createElement('img');
+            img2.setAttribute("src", "../0526_js/img/pic1.jpg");
             // img.src = "../0526_js/img/road.jpg";
-            img.width = 500;
-            img.height = 100;
-            document.body.appendChild(img);
+            img2.width = 500;
+            img2.height = 100;
+            document.body.appendChild(img2);
         }
+
+
+        // window.onload가 여러 개일 경우는 위에 겹쳐져서 실행됨
+        //      1. img2.style.color = "red"; 같이 스타일을 지정
+        //      2. div 태그 내에 지정하여 구분
+    
+        // window.onload = function() {
+        //     var img = document.createElement('img');
+        //     img.setAttribute("src", "../0526_js/img/pic1.jpg");
+        //     // img.src = "../0526_js/img/road.jpg";
+        //     img.width = 500;
+        //     img.height = 100;
+        //     document.body.appendChild(img);
+        // }
+
+
+        //
     </script>
 </head>
 <body>
