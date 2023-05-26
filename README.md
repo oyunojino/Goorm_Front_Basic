@@ -1,8 +1,8 @@
 # goorm_front
 
 ## 연습해보기
-    - [Exercism](https://exercism.org/)
-    - [백준](https://www.acmicpc.net/)
+[Exercism](https://exercism.org/)   
+[백준](https://www.acmicpc.net/)
 
 ## [0515_OT, AWS](https://darkened-crest-275.notion.site/20230515_OT-1a5ebd83eabe4ab2bc198a2a2749d458)
     01. OT
