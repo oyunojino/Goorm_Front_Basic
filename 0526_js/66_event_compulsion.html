@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Compulsion</title>
+    <script>
+        window.onload = function() {
+            var buttonA = document.getElementById('button-a');
+            var buttonB = document.getElementById('button-b');
+
+            var counterA = document.getElementById('counter-a');
+            var counterB = document.getElementById('counter-b');
+            
+            buttonA.onclick = function () {
+                counterA.innerHTML = Number(counterA.innerHTML) + Number(1);
+            }
+            buttonB.onclick = function () {
+                // 일반적인 코드 작성
+                counterB.innerHTML = Number(counterB.innerHTML) + Number(1);
+
+                // 이벤트 강제 발생
+                buttonA.onclick();
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button-a">Button A</button>
+    <button id="button-b">Button B</button>
+    <h1>A 클릭 횟수 - <span id="counter-a">0</span></h1>
+    <h1>B 클릭 횟수 - <span id="counter-b">0</span></h1>
+</body>
+</html>
