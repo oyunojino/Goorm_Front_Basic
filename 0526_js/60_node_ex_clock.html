@@ -6,11 +6,11 @@
     <script>
         window.onload = function() {
             var clock = document.getElementById('clock');
-            
+
             // 반복 실행을 해주는 내장함수
             setInterval(() => {
-                
-            }, interval);
+                clock.innerHTML = new Date().toString();
+            }, 1000);
         }
     </script>
 </head>
