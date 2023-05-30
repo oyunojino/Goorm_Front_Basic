@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+        캡슐화는 클로저를 기반으로 사용하는 기술이며 직접 접근을 막을 경우 사용하는 기술이에요
+        캡슐화를 setOO 메서드를 사용하여 프로토타입을 만들고 사각형의 넓이를 구하는 코드를 구현해보세요~
+     -->
+<head>
+    <script>
+        // 생성자 함수를 선언합니다.
+        function Rectangle(w, h) {
+            // 변수를 선언합니다.
+            var width = w;
+            var height = h;
+            // 메서드를 선언합니다.
+            this.getWidth = function () { return width; };
+            this.getHeight = function () { return height; };
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '길이는 음수일 수 없습니다.';
+                } else {
+                    width = w;
+                }
+            };
+            this.setHeight = function (h) {
+                if (h < 0) {
+                    throw '길이는 음수일 수 없습니다.';
+                } else {
+                    height = h;
+                }
+            };
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };f
+        // 변수를 선언합니다.
+        var rectangle = new Rectangle(5, 7);
+        // 출력합니다.
+        alert('width: ' + rectangle.getWidth());
+        // 함수 자체의 객체에 접근은 불가합니다.
+        alert('width:' + rectangle.width);
+    </script>
+</head>
+<body>
+</body>
+</html>
